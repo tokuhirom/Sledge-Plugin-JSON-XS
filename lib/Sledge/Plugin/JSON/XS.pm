@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use 5.00800;
 use JSON::XS;
+use Encode ();
 
 our $VERSION = '0.01';
 our $ConformToRFC4627 = 0;
@@ -49,6 +50,10 @@ sub _content_type {
 
 sub _add_callback {
     my ($self, $cb, $json) = @_;
+
+    if (Encode::is_utf8($cb)) {
+        $cb = Encode::encode('utf8', $cb);
+    }
 
     my $output;
     $output .= "$cb(" if $cb;

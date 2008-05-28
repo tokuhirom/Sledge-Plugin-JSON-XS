@@ -1,6 +1,7 @@
 use strict;
 use warnings;
-use Test::More tests => 10;
+use Test::More tests => 12;
+use Encode;
 
 # -------------------------------------------------------------------------
 # test util codes.
@@ -142,6 +143,17 @@ test(
     },
     sub {
         is_ex $page->r->{'print'}, '{"foo":"bar"}';
+    },
+);
+
+test(
+    'callback_flagged_utf8',
+    sub {
+        $REQ_HASH = { callback => decode_utf8('hoge') };
+    },
+    sub {
+        is_ex $page->r->{'print'}, 'hoge({"foo":"bar"});';
+        ok( (!Encode::is_utf8($page->r->{'print'})), 'not flagged');
     },
 );
 
