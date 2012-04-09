@@ -1,3 +1,1 @@
-steps = CommitMessageWrap, FindVersion, ChangeVersion, CheckChangeLog, DistTest, Commit, MakeDist, UploadCPAN
-svk.tagpattern = release-%v
-commit_message.format = lang/perl/Sledge-Plugin-JSON-XS: %msg
+steps = FindVersion, ChangeVersion, CheckChangeLog, DistTest, Commit, MakeDist, UploadCPAN
