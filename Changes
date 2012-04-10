@@ -1,5 +1,9 @@
 Revision history for Perl extension Sledge::Plugin::JSON::XS
 
+0.04
+
+    - test fix
+
 0.03
 
     - package fix

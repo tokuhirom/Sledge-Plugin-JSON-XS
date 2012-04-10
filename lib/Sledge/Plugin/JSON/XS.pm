@@ -5,7 +5,7 @@ use 5.00800;
 use JSON::XS;
 use Encode ();
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 our $ConformToRFC4627 = 0;
 our $ENCODING = 'utf-8';
 
