@@ -1,18 +1,22 @@
-Revision history for Perl extension Sledge::Plugin::JSON::XS
+Revision history for Perl module Sledge::Plugin::JSON::XS
 
-0.04
+0.05 2012-04-15
+
+0.04 2012-04-09
 
     - test fix
 
-0.03
+0.03 2012-04-08
 
     - package fix
 
-0.02
+0.02 2008-05-27
 
     - bug fixed.
       flagged utf8 garble if you use Sledge::Request::I18N & jsonp
       (reported by fake++)
 
-0.01    Thu Feb  7 15:44:20 2008
-        - original version
+0.01 2008-02-07
+
+    - original version
+
